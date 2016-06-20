@@ -9,8 +9,24 @@ head(hotdogs)
 
 # Import the hotdogs.txt file: hotdogs
 path_1 <- file.path("C:/Git/datacamp", "hotdogs.txt")
-
 hotdogs <- read.table(path_1, sep = "\t", col.names = c("type", "calories", "sodium"))
-
 # Call head() on hotdogs
 head(hotdogs)
+
+#stringsAsFactors
+pools <- read.table("swimming_pools.csv", header = T, sep = ",", stringsAsFactors = F)
+str(pools)
+
+#Arguments
+# Finish the read.delim() call
+hotdogs <- read.delim("hotdogs.txt", header = F, col.names = c("type", "calories", "sodium"))
+
+# Select the hot dog with the least calories: lily
+lily <- hotdogs[which.min(hotdogs$calories), ]
+
+# Select the observation with the most sodium: tom
+tom <- hotdogs[which.max(hotdogs$sodium),]
+
+# Print lily and tom
+print(lily)
+print(tom)
