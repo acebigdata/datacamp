@@ -30,3 +30,11 @@ tom <- hotdogs[which.max(hotdogs$sodium),]
 # Print lily and tom
 print(lily)
 print(tom)
+
+#introducing readr package
+install.packages("readr")
+library(readr)
+
+#installing data.table package
+install.packages("data.table")
+library(data.table)
